@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--这里的namespace必须和是对应的mapper.java的地址-->
+<mapper namespace="com.springmvc.dao.testMapper">
+
+    <!--id必须和对应的mapper.java的方法名称相同，不管返回类型是List还是只有一个，resultMap或resultType都是一样的-->
+    <select id="testSql" parameterType="int" resultType="java.lang.Integer">
+        SELECT number FROM hoho
+        WHERE id = #{id}
+    </select>
+</mapper>
