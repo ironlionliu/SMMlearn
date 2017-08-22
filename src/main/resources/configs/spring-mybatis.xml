@@ -29,13 +29,13 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <!--<property name="mapperLocations" value="classpath:/mappers/testMapper.xml"/>-->
+        <property name="mapperLocations" value="classpath:/mappers/testmapper.xml"/>
         <!--<property name="mapperLocations" value="classpath:mapper/*Mapper.xml"/>-->
         <!--<property name="typeAliasesPackage" value="com.gcoreinc.domain"/>-->
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="com.springmvc.dao"/>
+        <property name="basePackage" value="com.dbmanage.dao"/>
     </bean>
 
     <!--&lt;!&ndash; 配置事务管理器 &ndash;&gt;-->
